@@ -606,9 +606,9 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 33e2634b0f2e841eabb970bbf404ddca, type: 2}
   card_name: 
   description: 
-  health: 0
-  cost: 0
-  damage: 0
+  health: 5
+  cost: 1
+  damage: 3
   sprite: {fileID: 0}
   nameText: {fileID: 5012983498749283498}
   descriptionText: {fileID: 2568280005145556875}

@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hand
+  - Hand1
+  - G
+  - G1
+  - W
+  - W1
+  - S
+  - S1
+  - D
+  - D2
   layers:
   - Default
   - TransparentFX
