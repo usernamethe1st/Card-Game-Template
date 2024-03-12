@@ -12,15 +12,21 @@ public class Pckers : MonoBehaviour
     public Transform Death1;
     public Transform Water1;
     public Transform Sky1;
-   
+    public bool mmm = true;
+  
     public float ter = 1;
+    public float ll = 1 ;
+
+    public Hud hud;
+  
     // Start is called before the first frame update
     void Start()
     {
 
+        hud = GameObject.FindObjectOfType<Hud>();
         Green1 = GameObject.FindGameObjectWithTag("G1").transform;
         fire1 = GameObject.FindGameObjectWithTag("hand1").transform;
-        Death1 = GameObject.FindGameObjectWithTag("D1").transform;
+        Death1 = GameObject.FindGameObjectWithTag("D2").transform;
         Water1 = GameObject.FindGameObjectWithTag("W1").transform;
         Sky1 = GameObject.FindGameObjectWithTag("S1").transform;
     }
@@ -28,33 +34,64 @@ public class Pckers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (mmm == false)
         {
-            ter = ter - 1;
+            ll = ll - Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.S))
+
+        if (ll <= 0)
         {
-            ter = ter + 1;
+            ll = 1;
+            mmm = true;
         }
-        if (ter == 1)
+        if (mmm)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                mmm = false;
+                hud.ter = hud.ter - 1;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                mmm = false;
+
+                hud.ter = hud.ter + 1;
+            }
+        }
+
+        if (hud.ter == 1)
         {
             transform.position = Green1.position;
         }
-        if (ter == 2)
+        if (hud.ter == 2)
         {
             transform.position = fire1.position;
         }
-        if (ter == 3)
+        if (hud.ter == 3)
         {
             transform.position = Death1.position;
         }
-        if (ter == 4)
+        if (hud.ter == 4)
         {
             transform.position = Water1.position;
         }      
-        if (ter == 5)
+        if (hud.ter == 5)
         {
             transform.position = Sky1.position;
+        }
+
+        if (ter > 5)
+        {
+            ter = 1;
+        }
+        if (ter < 1)
+        {
+            ter = 5;
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            hud.sendt = true;
         }
     }
 }

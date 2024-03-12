@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class Mix : MonoBehaviour
 {
-    public float ters = 1;
-    
+  
     public Transform Green;
     public Transform fire;
     public Transform Death;
     public Transform Water;
     public Transform Sky;
-   
+    public bool mmm = true;
 
+    public Hud hud;
+    public float ll = 1 ;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,38 +24,75 @@ public class Mix : MonoBehaviour
         Water = GameObject.FindGameObjectWithTag("W").transform;
         Sky = GameObject.FindGameObjectWithTag("S").transform;
 
+        hud = GameObject.FindObjectOfType<Hud>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (mmm == false)
         {
-            ters = ters - 1;
+            ll = ll - Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+
+        if (ll <= 0)
         {
-            ters = ters + 1;
+            ll = 1;
+            mmm = true;
         }
-        if (ters == 1)
+
+        if (mmm)
+        {
+
+
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                mmm = false;
+
+                    hud.ters = hud.ters - 1;
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                mmm = false;
+
+                hud.ters = hud.ters + 1;
+            }
+        }
+
+        if (hud.ters == 1)
         {
             transform.position = Green.position;
         }
-        if (ters == 2)
+        if (hud.ters == 2)
         {
             transform.position = fire.position;
         }
-        if (ters == 3)
+        if (hud.ters == 3)
         {
             transform.position = Death.position;
         }
-        if (ters == 4)
+        if (hud.ters == 4)
         {
             transform.position = Water.position;
         }      
-        if (ters == 5)
+        if (hud.ters == 5)
         {
             transform.position = Sky.position;
         }
+        if (hud.ters > 5)
+        {
+            hud.ters = 1;
+        }
+        if (hud.ters < 1)
+        {
+            hud.ters = 5;
+        }
+
+        if (Input.GetKey(KeyCode.RightShift))
+        {
+            hud.send = true;
+        }
+        
     }
 }
