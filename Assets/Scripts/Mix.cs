@@ -30,6 +30,8 @@ public class Mix : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (mmm == false)
         {
             ll = ll - Time.deltaTime;
@@ -92,6 +94,7 @@ public class Mix : MonoBehaviour
         if (Input.GetKey(KeyCode.RightShift))
         {
             hud.send = true;
+            Debug.Log("RightShift key is pressed.");
         }
         
     }

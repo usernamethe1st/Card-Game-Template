@@ -20,13 +20,13 @@ public class Sendsendtdea : MonoBehaviour
         {
             hud.ch = hud.ters;
 
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         if (hud.sendt)
         {
             hud.chs = hud.ter;
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

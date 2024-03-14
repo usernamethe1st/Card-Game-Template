@@ -14,7 +14,7 @@ public class Pckers : MonoBehaviour
     public Transform Sky1;
     public bool mmm = true;
   
-    public float ter = 1;
+   
     public float ll = 1 ;
 
     public Hud hud;
@@ -24,16 +24,13 @@ public class Pckers : MonoBehaviour
     {
 
         hud = GameObject.FindObjectOfType<Hud>();
-        Green1 = GameObject.FindGameObjectWithTag("G1").transform;
-        fire1 = GameObject.FindGameObjectWithTag("hand1").transform;
-        Death1 = GameObject.FindGameObjectWithTag("D2").transform;
-        Water1 = GameObject.FindGameObjectWithTag("W1").transform;
-        Sky1 = GameObject.FindGameObjectWithTag("S1").transform;
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
+     
         if (mmm == false)
         {
             ll = ll - Time.deltaTime;
@@ -81,13 +78,13 @@ public class Pckers : MonoBehaviour
             transform.position = Sky1.position;
         }
 
-        if (ter > 5)
+        if (hud.ter > 5)
         {
-            ter = 1;
+            hud.ter = 1;
         }
-        if (ter < 1)
+        if (hud.ter < 1)
         {
-            ter = 5;
+            hud.ter = 5;
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
