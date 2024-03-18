@@ -95,6 +95,13 @@ public class Mix : MonoBehaviour
         {
             hud.send = true;
             Debug.Log("RightShift key is pressed.");
+            if (hud.sendwe)
+            {
+                if (hud.ters == 1)
+                {
+                    
+                }
+            }
         }
         
     }

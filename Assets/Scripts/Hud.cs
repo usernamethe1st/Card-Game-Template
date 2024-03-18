@@ -7,6 +7,8 @@ public class Hud : MonoBehaviour
     public float ters = 1;
     public bool send = false;
     
+    public bool sendwe = false;
+    
     public bool sendt = false;
     public float ter = 1;
 
