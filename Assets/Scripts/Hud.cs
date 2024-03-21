@@ -8,6 +8,7 @@ public class Hud : MonoBehaviour
     public bool send = false;
     
     public bool sendwe = false;
+    public bool atting = false;
     
     public bool sendt = false;
     public float ter = 1;
@@ -16,7 +17,7 @@ public class Hud : MonoBehaviour
     public float chs = 6;
     
     
-    public float pict = 1;
+    public float pict = 50;
     public float picts = 1;
     public static Hud hud;
     // Start is called before the first frame update

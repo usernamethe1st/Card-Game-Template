@@ -19,7 +19,7 @@ public class Mix : MonoBehaviour
     void Start()
     {
         Green = GameObject.FindGameObjectWithTag("G").transform;
-        fire = GameObject.FindGameObjectWithTag("hand").transform;
+        fire = GameObject.FindGameObjectWithTag("Hand").transform;
         Death = GameObject.FindGameObjectWithTag("D").transform;
         Water = GameObject.FindGameObjectWithTag("W").transform;
         Sky = GameObject.FindGameObjectWithTag("S").transform;
@@ -97,10 +97,7 @@ public class Mix : MonoBehaviour
             Debug.Log("RightShift key is pressed.");
             if (hud.sendwe)
             {
-                if (hud.ters == 1)
-                {
-                    
-                }
+                hud.atting = true;
             }
         }
         

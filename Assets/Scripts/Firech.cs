@@ -16,7 +16,7 @@ public class Firech : MonoBehaviour
     public Hud hud;
     public Transform target;
     public Transform targets;
-    public bool mmm = true;
+    public bool Mmm = true;
     
     // Start is called before the first fssrame update
     void Start()
@@ -33,10 +33,10 @@ public class Firech : MonoBehaviour
         {
             ll = 1;
 
-            mmm = true;
+            Mmm = true;
         }
 
-        if (mmm!)
+        if (Mmm!)
         {
             ll = ll - Time.deltaTime;
             
@@ -61,6 +61,7 @@ public class Firech : MonoBehaviour
 
             if (hud.ch == 2 | hud.chs == 2)
             {
+                Debug.Log("instantiate Firemana 1.");
                 if (kk == 1)
                 {
                     target = GameObject.FindGameObjectWithTag("G").transform;
@@ -114,21 +115,23 @@ public class Firech : MonoBehaviour
 
                 }
 
-                if (mmm == true)
+                if (Mmm == true)
                 {
+                    Debug.Log("instantiate Firemana 1.");
                     if (hud.pict <= 50)
                     {
                         Instantiate(Firemana, target.position, target.rotation);
-                        Debug.Log("instantiate fire 1.");
+                        Debug.Log("instantiate Firemana 1.");
                         kk = kk + 1;
-                        mmm = false;
+                        Mmm = false;
                     }
 
                     if (hud.pict < 70 && hud.pict > 50)
                     {
                         Instantiate(Orc);
                         kk = kk + 1;
-                        mmm = false;
+                        Mmm = false;
+                        Debug.Log("instantiate Orc 1.");
 
                     }
 
@@ -136,7 +139,8 @@ public class Firech : MonoBehaviour
                     {
                         Instantiate(Bow, target.position, target.rotation);
                         kk = kk + 1;
-                        mmm = false;
+                        Mmm = false;
+                        Debug.Log("instantiate Bow 1.");
 
                     }
 
@@ -144,7 +148,7 @@ public class Firech : MonoBehaviour
                     {
                         Instantiate(Littlefire, target.position, target.rotation);
                         kk = kk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
 
@@ -152,19 +156,19 @@ public class Firech : MonoBehaviour
                     {
                         Instantiate(Potonofextr, target.position, target.rotation);
                         kk = kk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
                 }
 
-                if (mmm == true)
+                if (Mmm == true)
                 {
                     if (hud.picts <= 50)
                     {
                         Instantiate(Firemana, targets.position, targets.rotation);
                         Debug.Log("instantiate fire 1.");
                         kkk = kkk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
 
@@ -172,7 +176,7 @@ public class Firech : MonoBehaviour
                     {
                         Instantiate(Orc);
                         kkk = kkk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
 
@@ -180,7 +184,7 @@ public class Firech : MonoBehaviour
                     {
                         Instantiate(Bow, targets.position, targets.rotation);
                         kkk = kkk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
 
@@ -188,7 +192,7 @@ public class Firech : MonoBehaviour
                     {
                         Instantiate(Littlefire, targets.position, targets.rotation);
                         kkk = kkk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
 
@@ -197,7 +201,7 @@ public class Firech : MonoBehaviour
                         Instantiate(Potonofextr, targets.position, targets.rotation);
                         Debug.Log("instantiate fire 1.");
                         kkk = kkk + 1;
-                        mmm = false;
+                        Mmm = false;
 
                     }
                 }
