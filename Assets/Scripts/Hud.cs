@@ -5,16 +5,18 @@ using UnityEngine;
 public class Hud : MonoBehaviour
 {
     public float ters = 1;
+    
     public bool send = false;
+    public bool sendt = false;
     
     public bool sendwe = false;
     public bool atting = false;
     
-    public bool sendt = false;
+  
     public float ter = 1;
 
     public float ch = 6;
-    public float chs = 6;
+   
     
     
     public float pict = 50;

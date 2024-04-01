@@ -17,6 +17,7 @@ public class Firech : MonoBehaviour
     public Transform target;
     public Transform targets;
     public bool Mmm = true;
+    public Transform _Canvas;
     
     // Start is called before the first fssrame update
     void Start()
@@ -36,7 +37,7 @@ public class Firech : MonoBehaviour
             Mmm = true;
         }
 
-        if (Mmm!)
+        if (Mmm)
         {
             ll = ll - Time.deltaTime;
             
@@ -55,13 +56,13 @@ public class Firech : MonoBehaviour
         }
         hud.pict = hud.pict + 1;
         hud.picts = hud.picts + 1;
-        if (hud.sendwe!)
+        if (hud.sendwe  == false)
         {
-
-
-            if (hud.ch == 2 | hud.chs == 2)
+            
+            
+            if (hud.ch == 2 )
             {
-                Debug.Log("instantiate Firemana 1.");
+                
                 if (kk == 1)
                 {
                     target = GameObject.FindGameObjectWithTag("G").transform;
@@ -117,10 +118,11 @@ public class Firech : MonoBehaviour
 
                 if (Mmm == true)
                 {
-                    Debug.Log("instantiate Firemana 1.");
+                    
                     if (hud.pict <= 50)
                     {
                         Instantiate(Firemana, target.position, target.rotation);
+                        Bow.transform.SetParent(_Canvas);
                         Debug.Log("instantiate Firemana 1.");
                         kk = kk + 1;
                         Mmm = false;
@@ -128,7 +130,8 @@ public class Firech : MonoBehaviour
 
                     if (hud.pict < 70 && hud.pict > 50)
                     {
-                        Instantiate(Orc);
+                        Instantiate(Orc, target.position, target.rotation);
+                        Bow.transform.SetParent(_Canvas);
                         kk = kk + 1;
                         Mmm = false;
                         Debug.Log("instantiate Orc 1.");
@@ -138,6 +141,7 @@ public class Firech : MonoBehaviour
                     if (hud.pict <= 85 && hud.pict >= 70)
                     {
                         Instantiate(Bow, target.position, target.rotation);
+                        Bow.transform.SetParent(_Canvas);
                         kk = kk + 1;
                         Mmm = false;
                         Debug.Log("instantiate Bow 1.");
@@ -147,6 +151,7 @@ public class Firech : MonoBehaviour
                     if (hud.pict < 105 && hud.pict > 85)
                     {
                         Instantiate(Littlefire, target.position, target.rotation);
+                        Littlefire.transform.SetParent(_Canvas);
                         kk = kk + 1;
                         Mmm = false;
 
@@ -154,7 +159,8 @@ public class Firech : MonoBehaviour
 
                     if (hud.pict <= 115 && hud.pict >= 105)
                     {
-                        Instantiate(Potonofextr, target.position, target.rotation);
+                        Instantiate(Potonofextr, target.position, target.rotation,_Canvas);
+                        Potonofextr.transform.SetParent(_Canvas);
                         kk = kk + 1;
                         Mmm = false;
 
@@ -166,6 +172,7 @@ public class Firech : MonoBehaviour
                     if (hud.picts <= 50)
                     {
                         Instantiate(Firemana, targets.position, targets.rotation);
+                        Firemana.transform.SetParent(_Canvas);
                         Debug.Log("instantiate fire 1.");
                         kkk = kkk + 1;
                         Mmm = false;
@@ -174,7 +181,8 @@ public class Firech : MonoBehaviour
 
                     if (hud.picts < 70 && hud.picts > 50)
                     {
-                        Instantiate(Orc);
+                        Instantiate(Orc, target.position, target.rotation);
+                        Orc.transform.SetParent(_Canvas);
                         kkk = kkk + 1;
                         Mmm = false;
 
@@ -183,6 +191,7 @@ public class Firech : MonoBehaviour
                     if (hud.picts <= 85 && hud.picts >= 70)
                     {
                         Instantiate(Bow, targets.position, targets.rotation);
+                        Bow.transform.SetParent(_Canvas);
                         kkk = kkk + 1;
                         Mmm = false;
 
@@ -191,6 +200,7 @@ public class Firech : MonoBehaviour
                     if (hud.picts < 105 && hud.picts > 85)
                     {
                         Instantiate(Littlefire, targets.position, targets.rotation);
+                        Bow.transform.SetParent(_Canvas);
                         kkk = kkk + 1;
                         Mmm = false;
 
@@ -199,6 +209,7 @@ public class Firech : MonoBehaviour
                     if (hud.picts <= 115 && hud.picts >= 105)
                     {
                         Instantiate(Potonofextr, targets.position, targets.rotation);
+                        Bow.transform.SetParent(_Canvas);
                         Debug.Log("instantiate fire 1.");
                         kkk = kkk + 1;
                         Mmm = false;

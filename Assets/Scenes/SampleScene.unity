@@ -1017,15 +1017,16 @@ MonoBehaviour:
   ll: 1
   kk: 1
   kkk: 1
-  Firemana: {fileID: 0}
-  Orc: {fileID: 0}
-  Bow: {fileID: 0}
-  Littlefire: {fileID: 0}
-  Potonofextr: {fileID: 0}
-  hud: {fileID: 0}
+  Firemana: {fileID: 139944937306382617, guid: 99ef4bccd68e84d9ba6e7c8051daf70b, type: 3}
+  Orc: {fileID: 8449818770812260395, guid: 17e906621820045c3ab6aae59feeace5, type: 3}
+  Bow: {fileID: 139944937306382617, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+  Littlefire: {fileID: 8449818770812260395, guid: b0534fc2179fb469e8779f3d6be862cc, type: 3}
+  Potonofextr: {fileID: 139944937306382617, guid: 65d74e6746bea4131a71690ac617af3a, type: 3}
+  hud: {fileID: 1737091271}
   target: {fileID: 0}
   targets: {fileID: 0}
   Mmm: 1
+  _Canvas: {fileID: 0}
 --- !u!1001 &284712824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2350,11 +2351,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee8c48878610400591dbc552a9c8d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: []
+  deck:
+  - {fileID: 1126644538999475434, guid: 17e906621820045c3ab6aae59feeace5, type: 3}
   player_deck:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4608709814338197990, guid: 99ef4bccd68e84d9ba6e7c8051daf70b, type: 3}
+  - {fileID: 4608709814338197990, guid: 65d74e6746bea4131a71690ac617af3a, type: 3}
+  - {fileID: 4608709814338197990, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+  - {fileID: 1126644538999475434, guid: b0534fc2179fb469e8779f3d6be862cc, type: 3}
+  - {fileID: 1126644538999475434, guid: 17e906621820045c3ab6aae59feeace5, type: 3}
   ai_deck: []
   player_hand: []
   ai_hand: []
@@ -2808,6 +2812,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &855571535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 139944937306382617, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_Name
+      value: Bow_Card 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1376.383
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 499.8305
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970200069765969068, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9352042f917c747c6be3e7b8744ec0cd, type: 3}
 --- !u!1001 &858524747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4789,12 +4850,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ters: 1
   send: 0
+  sendt: 0
   sendwe: 0
   atting: 0
-  sendt: 0
   ter: 1
   ch: 6
-  chs: 6
   pict: 50
   picts: 1
 --- !u!4 &1770523410 stripped
@@ -5983,3 +6043,4 @@ SceneRoots:
   - {fileID: 899165478}
   - {fileID: 576463985}
   - {fileID: 1772795147}
+  - {fileID: 855571535}
