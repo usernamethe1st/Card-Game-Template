@@ -5,10 +5,10 @@ using UnityEngine;
 public class Hud : MonoBehaviour
 {
     public float ters = 1;
-    
+    public float kk = 1;
     public bool send = false;
     public bool sendt = false;
-    
+    public Transform target;
     public bool sendwe = false;
     public bool atting = false;
     

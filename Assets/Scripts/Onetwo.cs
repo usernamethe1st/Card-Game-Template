@@ -29,12 +29,11 @@ public class Onetwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hud.ters == 1)
-        {
+        // (hud.ters == 1)
+        
 
 
-            if (hud.atting == true)
-            {
+            
 
 
                 if (this.gameObject.CompareTag("A1"))
@@ -51,6 +50,7 @@ public class Onetwo : MonoBehaviour
 
 
 
+                        
                         Vector2 direction = (Vector2)target.position - rd.position;
 
                         direction.Normalize();
@@ -61,16 +61,22 @@ public class Onetwo : MonoBehaviour
                         rd.velocity = transform.up * luck;
                     }
                 }
-            }
-        }
+            
+        
+
+
     }
  
     void OnCollisionEnter2D(Collision2D other)
     {
-        
-        if (other.gameObject.CompareTag("G"))
+        if (hud.atting == true)
         {
-            this.gameObject.tag = "A1";
+            if (other.gameObject.CompareTag("Clicker"))
+            {
+                this.gameObject.tag = "A1";
+                hud.atting = false;
+            }
         }
+   
     }
 }

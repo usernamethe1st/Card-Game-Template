@@ -562,6 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8031324947387334707}
   - component: {fileID: 1126644538999475434}
+  - component: {fileID: 3505115044991032972}
   m_Layer: 0
   m_Name: Little fire bire_Card 3
   m_TagString: Untagged
@@ -616,6 +617,19 @@ MonoBehaviour:
   costText: {fileID: 442761740662631701}
   damageText: {fileID: 3765396616364707702}
   spriteImage: {fileID: 4777937877724538930}
+--- !u!114 &3505115044991032972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449818770812260395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6cce6cf9fda43b08c101c94a6f85f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Canvas: {fileID: 0}
 --- !u!1 &8649418863568765847
 GameObject:
   m_ObjectHideFlags: 0
