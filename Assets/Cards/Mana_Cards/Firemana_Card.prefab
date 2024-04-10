@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 970200069765969068}
   - component: {fileID: 4608709814338197990}
   - component: {fileID: 6621355134393295169}
+  - component: {fileID: 6947708932328461703}
   m_Layer: 0
   m_Name: Firemana_Card
   m_TagString: Untagged
@@ -77,7 +78,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6cce6cf9fda43b08c101c94a6f85f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Canvas: {fileID: 0}
+  ll: 1
+  xvector: 50
+  hud: {fileID: 0}
+  yvector: 100
+  Canvas: {fileID: 0}
+--- !u!114 &6947708932328461703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139944937306382617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264e88175bb2d4b2ba2e4e8995defb3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hud: {fileID: 0}
+  target: {fileID: 0}
+  rd: {fileID: 0}
+  Firemana: {fileID: 0}
+  Orc: {fileID: 0}
+  Bow: {fileID: 0}
+  Littlefire: {fileID: 0}
+  Potonofextr: {fileID: 0}
+  rotateSpeed: 200
+  luck: 10
 --- !u!1 &2135455900782022775
 GameObject:
   m_ObjectHideFlags: 0

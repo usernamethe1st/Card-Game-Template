@@ -30,10 +30,16 @@ public class Onetwo : MonoBehaviour
     void Update()
     {
         // (hud.ters == 1)
-        
 
 
-            
+
+        if (hud.atting == true)
+        {
+            if (hud.ters == 1)
+            {
+                
+            }
+        }
 
 
                 if (this.gameObject.CompareTag("A1"))
@@ -69,10 +75,12 @@ public class Onetwo : MonoBehaviour
  
     void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("all is toung");
         if (hud.atting == true)
         {
             if (other.gameObject.CompareTag("Clicker"))
             {
+                
                 this.gameObject.tag = "A1";
                 hud.atting = false;
             }

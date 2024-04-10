@@ -17,6 +17,9 @@ TagManager:
   - 1
   - Centering
   - A1
+  - Canvas
+  - Clicker
+  - Playing
   layers:
   - Default
   - TransparentFX

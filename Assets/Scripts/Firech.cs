@@ -47,26 +47,31 @@ public class Firech : MonoBehaviour
             Mmm = true;
         }
 
-        if (Mmm == false)
+        if (!hud.std)
         {
-            ll = ll - Time.deltaTime;
-            
-        }
-        if (lll <= 0)
-        {
-            lll = 1;
 
-            Mmm = true;
+
+            if (Mmm == false)
+            {
+                ll = ll - Time.deltaTime;
+
+            }
+
+            if (lll <= 0)
+            {
+                lll = 1;
+
+                Mmm = true;
+            }
+
+            if (!Mm)
+            {
+                lll = lll - Time.deltaTime;
+
+            }
         }
 
-        if (!Mm)
-        {
-            lll = lll - Time.deltaTime;
-            
-        }
-       
-            
-        
+
         if (hud.picts > 115)
         {
             hud.picts = 0;
@@ -171,6 +176,8 @@ public class Firech : MonoBehaviour
                         Bow.transform.SetParent(_Canvas);
                         hud.kk = hud.kk + 1;
                         Mmm = false;
+                        //past all over plz
+                        hud.std = true;
                         Debug.Log("instantiate Bow 1.");
 
                     }

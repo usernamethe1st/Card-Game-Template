@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hud : MonoBehaviour
 {
+    public bool std = false;
+    
     public float ters = 1;
     public float kk = 1;
     public bool send = false;

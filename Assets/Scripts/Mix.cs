@@ -94,9 +94,10 @@ public class Mix : MonoBehaviour
         if (Input.GetKey(KeyCode.RightShift))
         {
             hud.send = true;
-            Debug.Log("RightShift key is pressed.");
+            
             if (hud.sendwe)
             {
+                
                 hud.atting = true;
             }
         }

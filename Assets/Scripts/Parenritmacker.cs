@@ -5,8 +5,8 @@ using UnityEngine;
 public class Parenritmacker : MonoBehaviour
 {
     public float ll = 1;
-  
-   
+
+    
     public float xvector = 50;
     public Hud hud;
 
@@ -18,7 +18,7 @@ public class Parenritmacker : MonoBehaviour
         Canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
         
         hud = GameObject.FindObjectOfType<Hud>();
-        hud.target.position = hud.target.position - new Vector3(xvector, yvector, 0);
+        //hud.target.position = hud.target.position - new Vector3(xvector, yvector, 0);
     }
 
     void Update()
@@ -40,8 +40,20 @@ public class Parenritmacker : MonoBehaviour
         ///    transform.position = transform.position - new Vector3(xvector, yvector, 0);
 
        // }
-       
-        this.transform.SetParent(Canvas);
+       if (this.gameObject.tag == "Untagged")
+       {
+
+
+           if (hud.std)
+           {
+               transform.position = hud.target.position;
+               hud.std = false;
+
+               this.gameObject.tag = "Playing";
+           }
+       }
+
+       this.transform.SetParent(Canvas);
        
 
         
