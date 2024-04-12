@@ -15,9 +15,35 @@ public class Parenritmacker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
         
         hud = GameObject.FindObjectOfType<Hud>();
+        if (hud.std)
+        {
+            transform.position = hud.target.position;
+            hud.std = false;
+
+            
+            if (hud.kk == 2)
+            { 
+                this.gameObject.tag = "Ga";
+            }
+            if (hud.kk == 3)
+            { 
+                this.gameObject.tag = "Fa";
+            }
+            if (hud.kk == 4)
+            { 
+                this.gameObject.tag = "Da";
+            } if (hud.kk == 5)
+            { 
+                this.gameObject.tag = "Wa";
+            } if (hud.kk == 6)
+            { 
+                this.gameObject.tag = "Sa";
+            }
+        }
         //hud.target.position = hud.target.position - new Vector3(xvector, yvector, 0);
     }
 
@@ -40,18 +66,7 @@ public class Parenritmacker : MonoBehaviour
         ///    transform.position = transform.position - new Vector3(xvector, yvector, 0);
 
        // }
-       if (this.gameObject.tag == "Untagged")
-       {
 
-
-           if (hud.std)
-           {
-               transform.position = hud.target.position;
-               hud.std = false;
-
-               this.gameObject.tag = "Playing";
-           }
-       }
 
        this.transform.SetParent(Canvas);
        

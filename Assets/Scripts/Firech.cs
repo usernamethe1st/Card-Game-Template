@@ -158,6 +158,7 @@ public class Firech : MonoBehaviour
                         Debug.Log("instantiate Firemana 1.");
                         hud.kk = hud.kk + 1;
                         Mmm = false;
+                        hud.std = true;
                     }
  
                     if (hud.pict < 70 && hud.pict > 50)
@@ -166,6 +167,7 @@ public class Firech : MonoBehaviour
                         Bow.transform.SetParent(_Canvas);
                         hud.kk = hud.kk + 1;
                         Mmm = false;
+                        hud.std = true;
                         Debug.Log("instantiate Orc 1.");
 
                     }
@@ -188,7 +190,7 @@ public class Firech : MonoBehaviour
                         Littlefire.transform.SetParent(_Canvas);
                         hud.kk = hud.kk + 1;
                         Mmm = false;
-
+                        hud.std = true;
                     }
 
                     if (hud.pict <= 115 && hud.pict >= 105)
@@ -197,7 +199,7 @@ public class Firech : MonoBehaviour
                         Potonofextr.transform.SetParent(_Canvas);
                         hud.kk = hud.kk + 1;
                         Mmm = false;
-
+                        hud.std = true;
                     }
                 }
 
@@ -210,16 +212,16 @@ public class Firech : MonoBehaviour
                         Debug.Log("instantiate fire 1.");
                         kkk = kkk + 1;
                         Mm = false;
-
+                      
                     }
 
                     if (hud.picts < 70 && hud.picts > 50)
                     {
-                        Instantiate(Orc,  hud.target.position,  hud.target.rotation,_Canvas);
+                        Instantiate(Orc,  targets.position,  targets.rotation,_Canvas);
                         Orc.transform.SetParent(_Canvas);
                         kkk = kkk + 1;
                         Mm = false;
-
+                       
                     }
 
                     if (hud.picts <= 85 && hud.picts >= 70)
@@ -228,7 +230,7 @@ public class Firech : MonoBehaviour
                         Bow.transform.SetParent(_Canvas);
                         kkk = kkk + 1;
                         Mm = false;
-
+                   
                     }
 
                     if (hud.picts < 105 && hud.picts > 85)
@@ -237,7 +239,7 @@ public class Firech : MonoBehaviour
                         Bow.transform.SetParent(_Canvas);
                         kkk = kkk + 1;
                         Mm = false;
-
+                       
                     }
 
                     if (hud.picts <= 115 && hud.picts >= 105)
@@ -247,7 +249,7 @@ public class Firech : MonoBehaviour
                         Debug.Log("instantiate fire 1.");
                         kkk = kkk + 1;
                         Mm = false;
-
+                        
                     }
                 }
             }

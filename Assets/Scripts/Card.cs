@@ -21,10 +21,11 @@ public class Card : MonoBehaviour
     public TextMeshProUGUI damageText;
     public Image spriteImage;
         
-
+    public Hud hud;
     // Start is called before the first frame update
     void Start()
     {
+        hud = GameObject.FindObjectOfType<Hud>();
         card_name = data.card_name;
         description = data.description;
         health = data.health;
@@ -43,6 +44,23 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.gameObject.tag == "A1")
+        {
+            if (cost == -2)
+            {
+                hud.mana = hud.mana + 2;
+            }
+            if (cost == 1)
+            {
+                hud.mana = hud.mana + -1;
+                
+            }
+
+            if (cost == 0)
+            {
+                hud.mana = hud.mana + -1;
+                health = health - 1;
+            }
+        }
     }
 }
